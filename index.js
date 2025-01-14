@@ -1,7 +1,7 @@
 const express = require("express");
 const session = require("express-session");
 const bodyParser = require("body-parser");
-const { poolPromise, sql, getSettings } = require("./views/db");
+const { poolPromise, sql, getSettings } = require("./db");
 const QRCode = require("qrcode");
 const PDFDocument = require("pdfkit");
 const app = express();
