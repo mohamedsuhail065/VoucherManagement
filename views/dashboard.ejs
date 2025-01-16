@@ -212,6 +212,7 @@
     </div>
 
     <script>
+      //function to generate QRCode
       function generateQRCode() {
         fetch("http://localhost:3000/generate-qrcode", {
           method: "POST",
@@ -232,7 +233,7 @@
           })
           .catch((err) => console.error(err));
       }
-
+      //function to export pdf
       function exportPdf(voucherId) {
         fetch(`/export-pdf/${voucherId}`, { method: "GET" })
           .then((res) => res.blob())
@@ -247,7 +248,7 @@
           })
           .catch((err) => console.log(err));
       }
-
+      //function to print voucher
       function printVoucher(voucherId) {
         fetch(`/export-pdf/${voucherId}`, { method: "GET" })
           .then((res) => res.blob())
